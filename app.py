@@ -24,7 +24,13 @@ def to_usd():
                 "convertedCurrency": "USD"
             }
     """
-    pass
+    return { 
+        "amount": int(request.args.get('amount', 0)), 
+        "currency": "UZS", 
+        "converted": int(request.args.get('amount', 0)) / usd, 
+        "convertedCurrency": "USD" 
+    }
+    
 
 @app.route('/api/to-uzs', methods=['GET'])
 def to_uzs():
@@ -46,7 +52,12 @@ def to_uzs():
                 "convertedCurrency": "UZS"
             }
     """
-    pass
+    return { 
+        "amount": int(request.args.get('amount', 0)), 
+        "currency": "UZS", 
+        "converted": int(request.args.get('amount', 0)) * usd, 
+        "convertedCurrency": "USD" 
+    }
     
 
 if __name__ == '__main__':
