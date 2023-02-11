@@ -65,9 +65,9 @@ def to_uzs():
     """
     return { 
         "amount": int(request.args.get('amount', 0)), 
-        "currency": "UZS", 
+        "currency": "USD", 
         "converted": int(request.args.get('amount', 0)) * usd, 
-        "convertedCurrency": "USD" 
+        "convertedCurrency": "UZS" 
     }
     
 
